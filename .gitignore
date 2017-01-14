@@ -1,0 +1,13 @@
+_site/
+.sass-cache
+.jekyll-metadata
+_deploy.yml
+.bundle
+bin
+vendor
+_deploy.yml
+Gemfile.lock
+.deploy/
+bower_components/
+*.swp
+*~
