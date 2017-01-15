@@ -1,6 +1,12 @@
-{% assign shape = 'circle' %}
-{% include 'color' %}
-{% include 'color' with 'red' %}
-{% include 'color' with 'blue' %}
-{% assign shape = 'square' %}
-{% include 'color' with 'red' %}
+{% assign val1 = 'hello' %}
+{% assign val2 = 'world' %}
+
+{% capture mycomment %}
+# Include test
+## Single param
+{% include color.liquid key1=val1 %}
+{% include color.liquid key2=val2 %}
+## Multi param
+{% include color.liquid key1=val1 key2=val2 %}
+{% endcapture %}
+{{ mycomment | markdownify }}
