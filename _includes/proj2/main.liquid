@@ -1,0 +1,13 @@
+{% capture disp %}
+# Project 2
+{% assign myarr="a,b,c" | split: ',' %}
+Array size: {{ myarr.size }}  
+Array elements: {% for i in myarr %}{{ i }},{% endfor %}
+{% comment %}
+{% include proj2/ls_arr.liquid arr="hello" %}
+{% endcomment %}
+{% include proj2/ls_arr.liquid arr=myarr %}
+{% endcapture %}
+{{ disp | markdownify }}
+{% comment %}
+{% endcomment %}
